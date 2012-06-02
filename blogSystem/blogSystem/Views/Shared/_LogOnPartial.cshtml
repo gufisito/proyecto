@@ -1,0 +1,9 @@
+﻿<div class="btn input-small">
+@if(Request.IsAuthenticated) {
+    <text>Welcome <strong>@User.Identity.Name</strong>
+     @Html.ActionLink("Log out", "LogOff", "Account") </text>
+}
+else {
+     @Html.ActionLink("Login", "LogOn", "Account") 
+}
+</div>

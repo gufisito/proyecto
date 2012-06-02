@@ -1,0 +1,12 @@
+c:\users\vaio\documents\visual studio 2010\Projects\blogSystem\blogSystem\bin\blogSystem.dll
+c:\users\vaio\documents\visual studio 2010\Projects\blogSystem\blogSystem\bin\blogSystem.pdb
+c:\users\vaio\documents\visual studio 2010\Projects\blogSystem\blogSystem\obj\Debug\ResolveAssemblyReference.cache
+c:\users\vaio\documents\visual studio 2010\Projects\blogSystem\blogSystem\obj\Debug\blogSystem.dll
+c:\users\vaio\documents\visual studio 2010\Projects\blogSystem\blogSystem\obj\Debug\blogSystem.pdb
+C:\Users\VAIO\documents\visual studio 2010\Projects\blogSystem\blogSystem\bin\Microsoft.Web.Helpers.dll
+F:\blogSystem\blogSystem\bin\blogSystem.dll
+F:\blogSystem\blogSystem\bin\blogSystem.pdb
+F:\blogSystem\blogSystem\bin\Microsoft.Web.Helpers.dll
+F:\blogSystem\blogSystem\obj\Debug\ResolveAssemblyReference.cache
+F:\blogSystem\blogSystem\obj\Debug\blogSystem.dll
+F:\blogSystem\blogSystem\obj\Debug\blogSystem.pdb

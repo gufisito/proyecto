@@ -1,0 +1,41 @@
+﻿@model blogSystem.Models.perfil
+@{
+    ViewBag.Title = "ViewInfo";
+}
+
+<h2>Informacion personal del usuario</h2>
+
+@{
+    string imagen = "~/Content/images/" + ViewBag.lista.avatar;
+}
+<div class="edit">
+    <ul>
+        <li>
+            <a> 
+                <span class="listaLabel"><strong>Nombre</strong></span>
+                <span>@ViewBag.lista.nombre @ViewBag.lista.apellido</span>
+                <span class="listaEdit">Editar</span>
+            </a>
+        </li>
+        <li>
+            <a> 
+                <span class="listaLabel"><strong>Ubicación</strong></span>
+                <span>@ViewBag.lista.ubicacion</span>
+                <span class="listaEdit">Editar</span>
+            </a>
+        </li>
+        <li>
+            <a> 
+                <span class="listaLabel"><strong>Sexo</strong></span>
+                <span>@ViewBag.lista.sexo</span>
+                <span class="listaEdit">Editar</span>
+            </a>
+        </li>
+        <li></li>
+    </ul>
+</div>
+
+@section SideBarLeft {
+    @{ Html.RenderPartial("_SideBarLeft");}
+}
+

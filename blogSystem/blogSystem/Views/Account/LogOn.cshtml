@@ -1,0 +1,53 @@
+﻿@model blogSystem.Models.LogOnModel
+
+@using Microsoft.Web.Helpers
+@{
+    ViewBag.Title = "Log On";
+    ReCaptcha.PublicKey = "6Leh1NESAAAAAPAGmfGJ8O8FmTHIqNR0ILftTRmk";
+}
+<div>
+<h2>Autenticación de Usuario</h2>
+<p>
+    Por favor ingrese su username y password. Si usted no tiene una cuenta @Html.ActionLink("registrese", "Register").
+</p>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.")
+
+@using (Html.BeginForm()) {
+        <fieldset>
+            <legend>Informacion de cuenta</legend>
+
+            <div class="clearfix">
+                @Html.LabelFor(m => m.UserName)
+                <div class="input">
+                    @Html.TextBoxFor(m => m.UserName)
+                    @Html.ValidationMessageFor(m => m.UserName)
+                </div>
+            </div>           
+
+            <div class="clearfix">
+                @Html.LabelFor(m => m.Password)
+                <div class="input">
+                    @Html.PasswordFor(m => m.Password)
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+            </div>
+           
+            <div class="editor-label">
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe)
+            </div>
+            @if (Session["captcha"] != null && (int)Session["captcha"] > 2)
+            {
+                @ReCaptcha.GetHtml(theme: "red")
+            }
+
+            <div class="actions">
+                <input type="submit" class="btn primary" value="Entrar" />
+            </div>
+        </fieldset>   
+}
+</div>

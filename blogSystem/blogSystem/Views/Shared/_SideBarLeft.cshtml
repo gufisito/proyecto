@@ -1,0 +1,18 @@
+﻿@{
+    string imagen = "~/Content/images/" + @ViewBag.lista.avatar;
+}
+<div id="profile">
+    <img src="@Url.Content(imagen)" alt="Imagen de usuario" width="130" height="130" />
+    <span>
+        <p>@ViewBag.lista.nombre @ViewBag.lista.apellido</p>
+    </span>
+</div>
+
+<ul>
+    <li>@Html.ActionLink("Información","ViewInfo","Profile")</li>
+    <li>@Html.ActionLink("Libros","Index","Book")</li>
+    <li>@Html.ActionLink("Tutoriales","Index","Tutorial")</li>
+    <li>@Html.ActionLink("Artículos","Index","Article")</li>
+    <li>@Html.ActionLink("Cursos","Index","Course")</li>
+    <li>Actividades</li>
+</ul>

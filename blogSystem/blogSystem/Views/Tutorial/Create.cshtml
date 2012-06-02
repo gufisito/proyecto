@@ -1,0 +1,41 @@
+﻿@model blogSystem.Models.PublicModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm()){
+    <fielset>
+        <legend>Agregar un Nuevo Tutorial</legend>
+        <div class="clearfix">
+            @Html.LabelFor(m => m.Titulo)
+            <div class="input">
+                @Html.TextBoxFor(m => m.Titulo)
+                @Html.ValidationMessageFor(m => m.Titulo)
+            </div>
+        </div>
+        <div class="clearfix">
+            @Html.LabelFor(m => m.Descripcion)
+            <div class="input">
+                @Html.TextBoxFor(m => m.Descripcion)
+                @Html.ValidationMessageFor(m => m.Descripcion)
+            </div>
+        </div>
+        <div class="clearfix">
+            @Html.LabelFor(m => m.Categoria)
+            <div class="input">
+                
+            </div>
+        </div>
+        <div class="clearfix">
+            @Html.LabelFor(m => m.Contenido)
+            <div class="input">
+                @Html.EditorFor(m =>m.Contenido)
+                @Html.ValidationMessageFor(m => m.Contenido)
+            </div>
+        </div>
+        <div class="actions">
+            <input type="submit" class="btn primary" value="Agregar" />
+        </div>
+    </fielset>
+}

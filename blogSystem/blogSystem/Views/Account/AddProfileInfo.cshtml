@@ -1,0 +1,67 @@
+﻿@model blogSystem.Models.PerfilModel
+
+@{
+    ViewBag.Title = "AddProfileInfo";
+}
+
+<h2>Agregar informacion </h2>
+@Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.")
+
+<form enctype="multipart/form-data" method="post" action="@Url.Action("AddProfileInfo")">
+        <fieldset>
+          
+            <div class="clearfix">
+                @Html.LabelFor(m => m.Nombre)
+                <div class="input">
+                    @Html.TextBoxFor(m => m.Nombre)
+                    @Html.ValidationMessageFor(m => m.Nombre)
+                </div>
+            </div>           
+
+            <div class="clearfix">
+                @Html.LabelFor(m => m.Apellido)
+                <div class="input">
+                    @Html.TextBoxFor(m => m.Apellido)
+                    @Html.ValidationMessageFor(m => m.Apellido)
+                </div>
+            </div>
+           
+            <div class="clearfix">
+                @Html.LabelFor(m => m.Ubicacion)
+                <div class="input">
+                    @Html.TextBoxFor(m => m.Ubicacion)
+                    @Html.ValidationMessageFor(m => m.Ubicacion)
+                </div>
+            </div>
+
+            <div class="clearfix">
+                @Html.LabelFor(m => m.Sexo)
+                <div class="input">
+                    @Html.DropDownListFor(m => m.Sexo, new[] { new SelectListItem { Value = "Masculino", Text = "Masculino" },
+                                                               new SelectListItem { Value = "Femenino", Text = "Femenino" } }, "Seleccionar Sexo")
+                    @Html.ValidationMessageFor(m => m.Sexo)
+                </div>
+            </div>
+
+            <div class="clearfix">
+                @Html.LabelFor(m => m.Intereses)
+                <div class="input">
+                    @Html.EditorFor(m => m.Intereses)
+                    @Html.ValidationMessageFor(m => m.Intereses)
+                </div>
+            </div>
+
+            <div class="clearfix">
+                @Html.LabelFor(m => m.Avatar)
+                <div class="input">
+                    <input type="file"  name="Avatar" />
+                    @Html.ValidationMessageFor(m => m.Avatar)
+                </div>
+            </div>
+
+            <div class="actions">
+                <input type="submit" class="btn primary" value="Guardar" />
+                <input type="button" class="btn" value="Cancelar" />
+            </div>
+        </fieldset>   
+</form>
